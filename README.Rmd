@@ -4,17 +4,19 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, echo = FALSE}
+```{r include=FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "README-"
 )
+library(devtools)
+load_all()
 ```
 
 # ssax
 
-The goal of ssax is to ...
+A simple package containing Symbolic Aggregate Approximation and its variations.
 
 ## Installation
 

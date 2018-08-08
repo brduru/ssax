@@ -3,7 +3,7 @@
 ssax
 ====
 
-The goal of ssax is to ...
+A simple package containing Symbolic Aggregate Approximation and its variations.
 
 Installation
 ------------
