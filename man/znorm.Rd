@@ -2,32 +2,29 @@
 % Please edit documentation in R/znorm.r
 \name{znorm}
 \alias{znorm}
-\title{Faz a Soma de Dois Numeros}
+\title{Z-normalization}
 \usage{
 znorm(timeSeries)
 }
 \arguments{
-\item{timeSeries}{Um numero}
+\item{timeSeries}{Time series}
 }
 \value{
-A soma dos numeros \code{x} e \code{y}.
+The time series transformed.
 }
 \description{
-Transform a time series into a time 
-series with an average of approximately 0 and standard deviation 1
-}
-\details{
-Utilize este campo para escrever detalhes mais tecnicos da
-    sua funcao (se necessario), ou para detalhar melhor como
-    utilizar determinados argumentos.
+Transform a time series into a time
+series with an average of approximately 0 and standard deviation 1.
+
+The formula for the transformation is:
+\deqn{x' = (x-\mu)/\sigma}
 }
 \examples{
-ts=c(2.0, 2.5, 3, 1, 3, 7.5, 4.1, 6.0, 7,2, 3.8, 5.1, 7.3, 0.3, 1,2, 1,7)
+ts=c(2.0, 2.5, 3.0, 1.0, 3.0, 7.5)
+
 znorm(ts)
 
-}
-\seealso{
-\code{\link[base]{sum}}, \code{\link[base]{+}}
+# -0.51830527 -0.29617444 -0.07404361 -0.96256693 -0.07404361  1.92513385
 }
 \author{
 Bruno Duru

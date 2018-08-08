@@ -1,26 +1,24 @@
-#' @title Faz a Soma de Dois Numeros
+#' @title Z-normalization
 #' @name znorm
 #'
-#' @description Transform a time series into a time 
-#' series with an average of approximately 0 and standard deviation 1
+#' @description Transform a time series into a time
+#' series with an average of approximately 0 and standard deviation 1.
 #'
-#' @param timeSeries Um numero
-#' 
+#' The formula for the transformation is:
+#' \deqn{x' = (x-\mu)/\sigma}
 #'
-#' @details Utilize este campo para escrever detalhes mais tecnicos da
-#'     sua funcao (se necessario), ou para detalhar melhor como
-#'     utilizar determinados argumentos.
+#' @param timeSeries Time series
 #'
-#' @return A soma dos numeros \code{x} e \code{y}.
+#' @return The time series transformed.
 #'
 #' @author Bruno Duru
 #'
-#' @seealso \code{\link[base]{sum}}, \code{\link[base]{+}}
-#'
 #' @examples
-#' ts=c(2.0, 2.5, 3, 1, 3, 7.5, 4.1, 6.0, 7,2, 3.8, 5.1, 7.3, 0.3, 1,2, 1,7)
+#' ts=c(2.0, 2.5, 3.0, 1.0, 3.0, 7.5)
+#'
 #' znorm(ts)
 #'
+#' # -0.51830527 -0.29617444 -0.07404361 -0.96256693 -0.07404361  1.92513385
 #' @export
 znorm <- function(timeSeries){
   timeSeries.mean <- mean(timeSeries)
