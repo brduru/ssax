@@ -3,7 +3,7 @@
 ssax
 ====
 
-[![Build Status](https://travis-ci.org/brduru/ssax.svg?branch=master)](https://travis-ci.org/brduru/ssax) [![License: GPL v2](https://img.shields.io/cran/l/devtools.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
+[![Build Status](https://travis-ci.org/brduru/ssax.svg?branch=master)](https://travis-ci.org/brduru/ssax) [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
 A simple package containing Symbolic Aggregate Approximation and its variations.
 
