@@ -23,5 +23,9 @@
 znorm <- function(timeSeries){
   timeSeries.mean <- mean(timeSeries)
   timeSeries.sd <- sd(timeSeries)
-  (timeSeries - timeSeries.mean)/timeSeries.sd
+  if (timeSeries.mean == 0) {
+    return(timeSeries)
+  }else{
+    return((timeSeries - timeSeries.mean)/timeSeries.sd)
+  }
 }

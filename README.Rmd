@@ -14,7 +14,7 @@ library(devtools)
 load_all()
 ```
 
-# ssax
+# ssax 
 
 A simple package containing Symbolic Aggregate Approximation and its variations.
 
@@ -25,12 +25,4 @@ You can install ssax from github with:
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
 devtools::install_github("brduru/ssax")
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-## basic example code
 ```
