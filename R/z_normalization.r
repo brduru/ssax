@@ -16,10 +16,13 @@
 #' @examples
 #'  x = seq(0, pi*2, pi/6)
 #'  ts = sin(x)*4 + rnorm(length(x))
-#'   ts_norm = z_normalization(y)
-#'   plot(x, y, type="l", col="blue")
-#'   lines(x, znorm(y), type="l", col="red")
+#'  ts_norm = z_normalization(ts)
+#'  plot(x, ts, type="l", col="blue")
+#'  lines(x, znorm(ts_norm), type="l", col="red")
 #'
+#'  print(paste("Mean is :",mean(ts_norm)))
+#'
+#'  print(paste("Sd is:",sd(ts_norm)))
 #'
 #' @export
 z_normalization <- function(timeSeries){
