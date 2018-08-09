@@ -18,7 +18,7 @@
 #'  ts = sin(x)*4 + rnorm(length(x))
 #'  ts_norm = z_normalization(ts)
 #'  plot(x, ts, type="l", col="blue")
-#'  lines(x, znorm(ts_norm), type="l", col="red")
+#'  lines(x, ts_norm, type="l", col="red")
 #'
 #'  print(paste("Mean is :",mean(ts_norm)))
 #'
