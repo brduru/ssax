@@ -1,5 +1,5 @@
 #' @title Z-normalization
-#' @name znorm
+#' @name z_normalization
 #'
 #' @description Transform a time series into a time
 #' series with an average of approximately 0 and standard deviation 1.
@@ -14,13 +14,15 @@
 #' @author Bruno Duru
 #'
 #' @examples
-#' ts=c(2.0, 2.5, 3.0, 1.0, 3.0, 7.5)
+#'  x = seq(0, pi*2, pi/6)
+#'  ts = sin(x)*4 + rnorm(length(x))
+#'   ts_norm = z_normalization(y)
+#'   plot(x, y, type="l", col="blue")
+#'   lines(x, znorm(y), type="l", col="red")
 #'
-#' znorm(ts)
 #'
-#' # -0.51830527 -0.29617444 -0.07404361 -0.96256693 -0.07404361  1.92513385
 #' @export
-znorm <- function(timeSeries){
+z_normalization <- function(timeSeries){
   timeSeries.mean <- mean(timeSeries)
   timeSeries.sd <- sd(timeSeries)
   if (timeSeries.mean == 0) {
