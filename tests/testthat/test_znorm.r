@@ -15,3 +15,18 @@ test_that("Empety Time Series", {
   ts_norm <- z_normalization(ts)
   expect_equal(ts_norm,NA)
 })
+test_that("Normalization Time Series", {
+  ts <- c(2,4,5,1,2,3)
+  ts_norm <- z_normalization(ts)
+  resp <- c(-0.5661385, 0.7925939, 1.4719601, -1.2455047, -0.5661385,  0.1132277)
+  expect_equal(ts_norm,resp,tolerance = 1e-6)
+
+})
+test_that("Normalization Time Series", {
+  ts <- c(2,4,5,1,2,NA,3)
+  ts_norm <- z_normalization(ts)
+  resp <- c(-0.5661385, 0.7925939, 1.4719601, -1.2455047, -0.5661385,  0.1132277)
+  expect_equal(ts_norm,resp,tolerance = 1e-6)
+
+})
+
