@@ -4,10 +4,12 @@
 \alias{z_normalization}
 \title{Z-normalization}
 \usage{
-z_normalization(timeSeries)
+z_normalization(timeSeries, na.rm = TRUE)
 }
 \arguments{
 \item{timeSeries}{Time series}
+
+\item{na.rm}{a logical indicating whether missing values should be removed.}
 }
 \value{
 The time series transformed.
@@ -20,9 +22,9 @@ The formula for the transformation is:
 \deqn{x' = (x-\mu)/\sigma}
 }
 \examples{
- x = seq(0, pi*2, pi/6)
- ts = sin(x)*4 + rnorm(length(x))
- ts_norm = z_normalization(ts)
+ x <- seq(0, pi*2, pi/6)
+ ts <- sin(x)*4 + rnorm(length(x))
+ ts_norm <- z_normalization(ts)
  plot(x, ts, type="l", col="blue")
  lines(x, ts_norm, type="l", col="red")
 

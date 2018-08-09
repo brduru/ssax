@@ -8,15 +8,16 @@
 #' \deqn{x' = (x-\mu)/\sigma}
 #'
 #' @param timeSeries Time series
+#' @param na.rm a logical indicating whether missing values should be removed.
 #'
 #' @return The time series transformed.
 #'
 #' @author Bruno Duru
 #'
 #' @examples
-#'  x = seq(0, pi*2, pi/6)
-#'  ts = sin(x)*4 + rnorm(length(x))
-#'  ts_norm = z_normalization(ts)
+#'  x <- seq(0, pi*2, pi/6)
+#'  ts <- sin(x)*4 + rnorm(length(x))
+#'  ts_norm <- z_normalization(ts)
 #'  plot(x, ts, type="l", col="blue")
 #'  lines(x, ts_norm, type="l", col="red")
 #'
@@ -25,12 +26,12 @@
 #'  print(paste("Sd is:",sd(ts_norm)))
 #'
 #' @export
-z_normalization <- function(timeSeries){
+z_normalization <- function(timeSeries,na.rm = TRUE){
+  if(na.rm){
+    timeSeries <- timeSeries[!is.na(timeSeries)]
+  }
+  if(length(timeSeries) == 0) return(NA)
   timeSeries.mean <- mean(timeSeries)
   timeSeries.sd <- sd(timeSeries)
-  if (timeSeries.mean == 0) {
-    return(timeSeries)
-  }else{
-    return((timeSeries - timeSeries.mean)/timeSeries.sd)
-  }
+  return((timeSeries - timeSeries.mean)/timeSeries.sd)
 }
