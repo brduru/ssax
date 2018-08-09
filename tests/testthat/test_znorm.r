@@ -10,3 +10,8 @@ test_that("SD 0", {
   ts_norm <- z_normalization(ts)
   expect_equal(sd(ts_norm),1,tolerance = 1e-6)
 })
+test_that("Empety Time Series", {
+  ts <- c()
+  ts_norm <- z_normalization(ts)
+  expect_equal(ts_norm,NA)
+})

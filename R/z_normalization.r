@@ -27,10 +27,10 @@
 #'
 #' @export
 z_normalization <- function(timeSeries,na.rm = TRUE){
+  if(length(timeSeries) == 0) return(NA)
   if(na.rm){
     timeSeries <- timeSeries[!is.na(timeSeries)]
   }
-  if(length(timeSeries) == 0) return(NA)
   timeSeries.mean <- mean(timeSeries)
   timeSeries.sd <- sd(timeSeries)
   return((timeSeries - timeSeries.mean)/timeSeries.sd)
