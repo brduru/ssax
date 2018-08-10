@@ -4,10 +4,10 @@
 \alias{z_normalization}
 \title{Z-normalization}
 \usage{
-z_normalization(timeSeries, na.rm = TRUE)
+z_normalization(time_series, na.rm = TRUE)
 }
 \arguments{
-\item{timeSeries}{Time series}
+\item{time_series}{Time series}
 
 \item{na.rm}{a logical indicating whether missing values should be removed.}
 }

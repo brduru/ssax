@@ -7,7 +7,7 @@
 #' The formula for the transformation is:
 #' \deqn{x' = (x-\mu)/\sigma}
 #'
-#' @param timeSeries Time series
+#' @param time_series Time series
 #' @param na.rm a logical indicating whether missing values should be removed.
 #'
 #' @return The time series transformed.
@@ -26,12 +26,12 @@
 #'  print(paste("Sd is:",sd(ts_norm)))
 #'
 #' @export
-z_normalization <- function(timeSeries,na.rm = TRUE){
-  if(length(timeSeries) == 0) return(NA)
+z_normalization <- function(time_series,na.rm = TRUE){
+  if(length(time_series) == 0) return(NA)
   if(na.rm){
-    timeSeries <- timeSeries[!is.na(timeSeries)]
+    time_series <- time_series[!is.na(time_series)]
   }
-  timeSeries.mean <- mean(timeSeries)
-  timeSeries.sd <- sd(timeSeries)
-  return((timeSeries - timeSeries.mean)/timeSeries.sd)
+  time_series.mean <- mean(time_series)
+  time_series.sd <- sd(time_series)
+  return((time_series - time_series.mean)/time_series.sd)
 }
